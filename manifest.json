@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "minAppVersion": "1.5.0",
   "description": "Customize the window title format by reordering vault name and file name.",
-  "author": "",
+  "author": "zhao414",
   "authorUrl": "",
   "isDesktopOnly": true
 }
