@@ -1,4 +1,4 @@
-import { Plugin } from "obsidian";
+import { Plugin, View } from "obsidian";
 import {
   type TitleSettings,
   DEFAULT_SETTINGS,
@@ -29,7 +29,7 @@ export default class ReformatWindowsTitlePlugin extends Plugin {
 
   updateTitle() {
     const vaultName = this.app.vault.getName();
-    const view = this.app.workspace.activeLeaf?.view;
+    const view = this.app.workspace.getActiveViewOfType(View);
     const fileName = view?.getDisplayText();
     const metaVersion = document.head.querySelector(
       'meta[name="app-version"]',
