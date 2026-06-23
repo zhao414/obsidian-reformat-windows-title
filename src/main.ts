@@ -24,14 +24,14 @@ export default class ReformatWindowsTitlePlugin extends Plugin {
   }
 
   onunload() {
-    document.title = this.app.vault.getName();
+    activeDocument.title = this.app.vault.getName();
   }
 
   updateTitle() {
     const vaultName = this.app.vault.getName();
     const view = this.app.workspace.getActiveViewOfType(View);
     const fileName = view?.getDisplayText();
-    document.title = formatTitle(
+    activeDocument.title = formatTitle(
       this.settings,
       vaultName,
       fileName,
