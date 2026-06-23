@@ -1,4 +1,4 @@
-import { Plugin, View } from "obsidian";
+import { Plugin, View, apiVersion } from "obsidian";
 import {
   type TitleSettings,
   DEFAULT_SETTINGS,
@@ -31,18 +31,11 @@ export default class ReformatWindowsTitlePlugin extends Plugin {
     const vaultName = this.app.vault.getName();
     const view = this.app.workspace.getActiveViewOfType(View);
     const fileName = view?.getDisplayText();
-    const metaVersion = document.head.querySelector(
-      'meta[name="app-version"]',
-    );
-    const obsidianVersion =
-      metaVersion instanceof HTMLMetaElement
-        ? metaVersion.content
-        : undefined;
     document.title = formatTitle(
       this.settings,
       vaultName,
       fileName,
-      obsidianVersion,
+      apiVersion,
     );
   }
 
