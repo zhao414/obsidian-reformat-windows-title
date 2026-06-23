@@ -25,8 +25,6 @@ export class TitleSettingTab extends PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
 
-    containerEl.createEl("h2", { text: "Reformat Windows Title" });
-
     new Setting(containerEl)
       .setName("Title order")
       .setDesc("Choose whether the file name or vault name appears first in the window title.")
