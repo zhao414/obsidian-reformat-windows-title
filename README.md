@@ -48,7 +48,7 @@ MIT
 
 ## Support
 
-If this plugin makes your daily life with Obsidian easier, consider
+If this plugin makes your daily life with Obsidian easier, consider buying me a coffee https://ko-fi.com/zhao414
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3E121X4Y7)
 
