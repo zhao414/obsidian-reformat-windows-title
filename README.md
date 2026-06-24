@@ -45,3 +45,12 @@ Copy `main.js`, `manifest.json`, and `styles.css` to your vault's `.obsidian/plu
 ## License
 
 MIT
+
+## Support
+
+If this plugin makes your daily life with Obsidian easier, consider
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3E121X4Y7)
+
+May the passion be with you!
+
