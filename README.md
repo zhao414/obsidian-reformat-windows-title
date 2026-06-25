@@ -13,8 +13,8 @@ Customize the Obsidian window title format by reordering the vault name and file
 | Setting | Output |
 |---------|--------|
 | File name first, ` - ` | `My Note - MyVault` |
-| Vault name first, ` | ` | `MyVault | My Note` |
-| File name first + version | `My Note - MyVault - Obsidian 1.13.1` |
+| Vault name first, ` \| ` | `MyVault \| My Note` |
+| Vault name first, ` - ` + version | `MyVault - My Note - Obsidian 1.13.1` |
 | Use default | `My Note - MyVault - Obsidian 1.13.1` |
 
 ## Installation
