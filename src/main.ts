@@ -22,7 +22,7 @@ export default class ReformatWindowsTitlePlugin extends Plugin {
 
     this.registerEvent(
       this.app.workspace.on("layout-change", () => {
-        activeWindow.setTimeout(() => this.updateTitle(), 0);
+        window.setTimeout(() => this.updateTitle(), 0);
       }),
     );
 
