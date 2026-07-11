@@ -1,7 +1,7 @@
 {
   "name": "reformat-windows-title",
-  "version": "1.0.3",
-  "description": "Customize the Obsidian window title format on Windows — reorder vault name and file name",
+  "version": "1.0.4",
+  "description": "Customize the Obsidian window title format — reorder vault name and file name",
   "main": "main.js",
   "scripts": {
     "dev": "node esbuild.config.mjs",
