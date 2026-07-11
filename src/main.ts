@@ -21,6 +21,12 @@ export default class ReformatWindowsTitlePlugin extends Plugin {
     );
 
     this.registerEvent(
+      this.app.workspace.on("layout-change", () => {
+        setTimeout(() => this.updateTitle(), 0);
+      }),
+    );
+
+    this.registerEvent(
       this.app.workspace.on("window-open", (win: WorkspaceWindow) => {
         this.updatePopoutTitle(win);
         win.on("active-leaf-change", () => {
@@ -40,24 +46,30 @@ export default class ReformatWindowsTitlePlugin extends Plugin {
     const vaultName = this.app.vault.getName();
     const view = this.app.workspace.getActiveViewOfType(View);
     const fileName = view?.getDisplayText();
-    activeDocument.title = formatTitle(
+    const title = formatTitle(
       this.settings,
       vaultName,
       fileName,
       apiVersion,
     );
+    if (activeDocument.title !== title) {
+      activeDocument.title = title;
+    }
   }
 
   updatePopoutTitle(win: WorkspaceWindow) {
     const vaultName = this.app.vault.getName();
     const titleEl = win.doc.querySelector(".view-header-title");
     const fileName = titleEl instanceof HTMLElement ? titleEl.textContent ?? undefined : undefined;
-    win.doc.title = formatTitle(
+    const title = formatTitle(
       this.settings,
       vaultName,
       fileName,
       apiVersion,
     );
+    if (win.doc.title !== title) {
+      win.doc.title = title;
+    }
   }
 
   async loadSettings() {
