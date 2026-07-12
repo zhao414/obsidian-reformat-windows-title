@@ -32,6 +32,7 @@ export default class ReformatWindowsTitlePlugin extends Plugin {
         win.on("active-leaf-change", () => {
           this.updatePopoutTitle(win);
         });
+        window.setTimeout(() => this.updateTitle(), 0);
       }),
     );
 
