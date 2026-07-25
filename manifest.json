@@ -2,7 +2,7 @@
   "id": "reformat-windows-title",
   "name": "Reformat Windows Title",
   "version": "1.0.5",
-  "minAppVersion": "1.5.0",
+  "minAppVersion": "1.13.0",
   "description": "Customize the window title format by reordering vault name and file name.",
   "author": "zhao414",
   "authorUrl": "https://github.com/zhao414",
